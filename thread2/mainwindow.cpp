@@ -90,6 +90,7 @@ QByteArray MainWindow::working(){
     encrypt(BytesForCipher{array, y, array.size(), &encryptedBytes});
     future.waitForFinished();
 
+
     msgBox.setText("Зашифровано! Затраченное время: " );
     msgBox.exec();
     ui->statusText->setText(worker->timeInfo);//выводим в статусбар затраченное на обработку время
